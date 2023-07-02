@@ -8,6 +8,8 @@ public interface HandlerService extends Service {
 
     HandlerDispatcher dispatcher();
 
+    <T> Handlers<T> create(T type, HandlerCondition<?, T> condition);
+
     <T> Handlers<T> create(T type);
 
     void destroy(Handlers<?> handlers);

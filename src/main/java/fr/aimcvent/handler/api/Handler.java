@@ -10,4 +10,6 @@ public interface Handler<E extends Event, T> {
 
     void handle(E event);
 
+    HandlerCondition<E, T> condition();
+
 }

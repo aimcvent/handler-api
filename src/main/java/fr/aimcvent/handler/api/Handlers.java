@@ -14,4 +14,6 @@ public interface Handlers<T> {
 
     boolean contains(Class<? extends Event> clazz);
 
+    HandlerCondition<?, ?> condition();
+
 }
