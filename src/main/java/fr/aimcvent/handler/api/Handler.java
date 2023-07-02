@@ -10,6 +10,10 @@ public interface Handler<E extends Event, T> {
 
     void handle(E event);
 
+    default int priority() {
+        return 0;
+    }
+
     HandlerCondition<E, T> condition();
 
 }
